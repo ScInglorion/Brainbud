@@ -1,0 +1,102 @@
+@import "mixins.scss";
+:root {
+    --color-bg-light: ##cee;
+    --color-bg-dark: #184E77;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-font-light: #e8f1f2;
+    --color-font-dark: #184E77;
+    --color-font-headers: #1E6091;
+    --color-primary: #168aad;
+    --color-primary-light: #1aa2cb;
+    --color-secondary: #52b69a;
+    --color-secondary-light: #99d98c;
+    --color-tertiary: #ff4d4d;
+    --color-tertiary-light: #ff8080;
+    --color-form-label: #555;
+    --color-form-placeholder: #666;
+    --color-form-outline: #555;
+    --color-form-text: #555;
+    --color-form-input-border: #999;
+    --color-form-input-color: var(--color-primary);
+    --font-primary: "Roboto", sans-serif;
+    --font-secondary: "Rancho", cursive;
+    --unzommed-100vw: 100vw;
+    --unzommed-100vh: 100vh;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    scrollbar-width: auto;
+    @include responsive-min(2560) {
+        font-size: 90.75%; //1rem=15px
+    }
+}
+
+html::-webkit-scrollbar,
+html *::-webkit-scrollbar {
+    width: auto;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--color-bg);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(200px, 1920px) minmax(0, 1fr);
+    font: normal normal normal 1rem/1.6 var(--font-primary);
+    color: var(--font-color-white);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-secondary);
+    color: var(--color-font-headers);
+}
+
+
+/* ----- Reset default style*/
+
+legend {
+    padding: 0;
+    display: table;
+}
+
+fieldset {
+    border: 0;
+    padding: 0.01em 0 0 0;
+    margin: 0;
+    min-width: 0;
+}
+
+button {
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+}
+
+button:active {
+    outline: var(--color-white);
+    border: 0.1rem solid var(--color-primary);
+}

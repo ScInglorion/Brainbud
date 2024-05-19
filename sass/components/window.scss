@@ -1,0 +1,26 @@
+.window {
+    background-color: #184E77;
+    width: 40vw;
+    border-radius: 6rem;
+    box-shadow: 0px 0px 8px 0px rgba(66, 68, 90, 1);
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__logo {
+        width: 20rem;
+        height: 20rem;
+        background-image: url(../../media/img/logo.png);
+        background-size: cover;
+        border-radius: 5rem;
+        box-shadow: 0px 0px 8px 0px rgba(66, 68, 90, 1);
+    }
+    &__buttons {
+        &--parallel {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+}
