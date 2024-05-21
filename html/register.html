@@ -20,14 +20,15 @@
                 <div class="window__logo">
                 </div>
                 <form class="form">
-                    <label for="email" class="label">Email:</label>
-                    <input type="text" id="email" name="email" class="input" placeholder="Email">
-                    <label for="password" class="label">Hasło:</label>
-                    <input type="text" id="password" name="password" class="input" placeholder="Hasło">
-                    <label for="password" class="label">Powtórz hasło:</label>
-                    <input type="text" id="repeat" name="password" class="input" placeholder="Hasło">
+                    <label for="emailreg" class="label">Email:</label>
+                    <input type="text" id="emailreg" name="emailreg" class="input" placeholder="Email">
+                    <label for="passwordreg" class="label">Hasło:</label>
+                    <input type="text" id="passwordreg" name="passwordreg" class="input" placeholder="Haslo">
+                    <label for="repeat" class="label">Powtorz haslo:</label>
+                    <input type="text" id="repeat" name="repeat" class="input" placeholder="Hasło">
                 </form>
-                <button href="login.html" class="button">
+                <!-- koniecznie dodanie id do przycisku rejestracji (chcoiaz tu pewnie kod bedzie troche inny ogołem)-->
+                <button id = 'reg_button' href="login.html" class="button">
                     <p>Stworz konto</p>
                 </button> 
                 <button href="login.html" class="button" onclick="go_to_page('login')">
@@ -36,12 +37,13 @@
             </section>
     </main>
 
-    <script src="./src/ui.js defer"></script>
-    <script src="./src/index.js defer"></script>
+    <script type="module" src="./src/ui.js " defer></script>
+    <script src="./dist/bundle.js " defer></script>
     <script> function go_to_page(page_name){
         if(typeof page_name == 'string'){
             window.location.href = page_name + ".html"
         }    
-    } </script>
-    
+    } 
+    </script>
+
 </body>
