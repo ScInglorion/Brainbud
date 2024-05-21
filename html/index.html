@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" type="image/png" href="./media/img/logo.png">
-   
 
     <title>BrainBud</title>
 </head>
@@ -20,27 +19,20 @@
             <section class="window">
                 <div class="window__logo">
                 </div>
-                <form class="form">
-                    <label for="login" class="label">Login:</label>
-                    <input type="text" id="login" name="login" class="input" placeholder="Login">
-                    <label for="password" class="label">Hasło:</label>
-                    <input type="text" id="password" name="password" class="input" placeholder="Hasło">
-                </form>
-                <button id= 'btn_login' href="login.html" class="button">
+                <div class="window__buttons--parallel">
+                    <button href="#" class="button" onclick="go_to_page('login')">
                     <p>Zaloguj się</p>
-              </button>
-            
-              <button href="login.html" class="button" onclick="go_to_page('register')">
-                <p>Register page</p>
-          </button>
+                  </button>
+                    <button href="#" class="button" onclick="go_to_page('register')">
+                    <p>Zarejestruj się</p>
+                  </button>
+                </div>
 
-
-
+                
 
             </section>
 
     </main>
-
     <script src="./src/ui.js defer"></script>
     <script src="./src/index.js defer"></script>
     <script> function go_to_page(page_name){
