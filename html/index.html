@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/png" href="./media/img/logo.png">
+
+    <title>BrainBud</title>
+</head>
+
+<body>
+    <main class="main">
+        <section class="start">
+            <section class="window">
+                <div class="window__logo">
+                </div>
+                <div class="window__buttons--parallel">
+                    <button href="#" class="button" onclick="go_to_page('login')">
+                    <p>Zaloguj się</p>
+                  </button>
+                    <button href="#" class="button" onclick="go_to_page('register')">
+                    <p>Zarejestruj się</p>
+                  </button>
+                </div>
+
+                
+
+            </section>
+
+    </main>
+    <script type="module" src="./src/ui.js " defer></script>
+    <script type="module" src="./dist/bundle.js " defer></script>
+    <script> function go_to_page(page_name){
+        if(typeof page_name == 'string'){
+            window.location.href = page_name + ".html"
+        }    
+    } 
+    </script>
+</body>
