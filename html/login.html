@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/png" href="media/img/logo.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/png" href="./media/img/logo.png">
 
     <title>BrainBud</title>
 </head>
@@ -27,16 +27,33 @@
                     <label for="password" class="label">Hasło:</label>
                     <input type="password" id="password" name="password" class="input" placeholder="Hasło">
                 </form>
+                <!-- koniecznie dodanie id do przycisku logowannia-->
                 <div class="error">
                     <div class="error__msg"></div>
                 </div>
-                <button href="login.html" class="button">
+                <button id='btn_login' href="login.html" class="button">
                     <p>Zaloguj się</p>
-              </button>
+                 </button>
 
+                <button href="login.html" class="button" onclick="go_to_page('register')">
+                    <p>Register page</p>
+                </button>
 
+                <!-- Div do sprawdzania czy działa error message -->
+                <div id="divLoginError" class="group">
+                    <div id="login_error" class="errorlabel"></div>
+                </div>
             </section>
 
     </main>
 
+    <script type="module" src="./src/ui.js " defer></script>
+    <script src="./dist/bundle.js " defer></script>
+    <script>
+        function go_to_page(page_name) {
+            if (typeof page_name == 'string') {
+                window.location.href = page_name + ".html"
+            }
+        }
+    </script>
 </body>
