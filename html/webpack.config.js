@@ -1,4 +1,3 @@
-import { AuthErrorCodes } from 'firebase/auth';
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');

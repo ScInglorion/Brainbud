@@ -10,14 +10,30 @@ export const log_btn = document.querySelector('#btn_login') // login button refe
 export const sign_btn = document.querySelector('#reg_button') // sign-up button reference
 
 // Login error
-export const showLoginError = (error) => { 
+export const showLoginError = (div, error) => { 
     if (error.code == AuthErrorCodes.INVALID_EMAIL) {
-        login_error.innerHTML = `Wrong email. Try again.`
+      div.innerHTML = `Please provide a proper email adress.`
       }
     else if (error.code == AuthErrorCodes.INVALID_PASSWORD) {
-        login_error.innerHTML = `Wrong password. Try again.`
+      div.innerHTML = `Please provide password that is at least 6 characters long.`
+    }
+    else if (error.code == AuthErrorCodes.INVALID_LOGIN_CREDENTIALS){
+      div.innerHTML = `Wrong email or password.`
+    }
+    else if (error.code == AuthErrorCodes.EMAIL_EXISTS){
+      div.innerHTML = `Email already in use.`
     }
     else {
-        login_error.innerHTML = `Error: ${error.message}`      
+      div.innerHTML = `Error: ${error.message}`      
     }
   }
+
+  export const disclaimer = (div, clear) => {
+    if (clear == "created"){
+      div.innerHTML = 'Konto zostało utworzone, przejdź do strony logownaia.'
+    }
+    else if(clear == "difference"){
+      div.innerHTML = 'There is a difference between passwords'
+    }
+  }
+ 
