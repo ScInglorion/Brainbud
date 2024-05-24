@@ -21,17 +21,24 @@
             <section class="window">
                 <div class="window__logo">
                 </div>
+                <div class="window__return">
+                    <a href="index.html">
+                        <img src="media/img/return_arrow.svg" alt="Return arrow" class="window__return--img">
+                    </a>
+                </div>
                 <form class="form">
-                    <label for="mail" class="label">Mail:</label>
-                    <input type="text" id="mail" name="mail" class="input" placeholder="Login">
-                    <label for="password" class="label">Hasło:</label>
-                    <input type="password" id="password" name="password" class="input" placeholder="Hasło">
+                    <label for="emailreg" class="label">Email:</label>
+                    <input type="text" id="emailreg" name="emailreg" class="input" placeholder="Email">
+                    <label for="passwordreg" class="label">Hasło:</label>
+                    <input type="password" id="passwordreg" name="passwordreg" class="input" placeholder="Hasło">
+                    <label for="repeat" class="label">Powtórz hasło:</label>
+                    <input type="password" id="repeat" name="repeat" class="input" placeholder="Hasło">
                 </form>
                 <div class="error">
                     <div class="error__msg"></div>
                 </div>
-                <button href="login.html" class="button">
-                    <p>Zaloguj się</p>
+                <button id='reg_button' href="login.html" class="button">
+                  <p>Stworz konto</p>
               </button>
 
 
