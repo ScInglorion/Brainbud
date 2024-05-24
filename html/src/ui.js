@@ -1,6 +1,6 @@
 import { AuthErrorCodes } from 'firebase/auth';
 
-export const email_field = document.querySelector('#login') // login email field reference
+export const email_field = document.querySelector('#email') // login email field reference
 export const password_field = document.querySelector('#password') // login password reference
 export const email_reg_field = document.querySelector('#emailreg') // registration email reference
 export const password_reg_field = document.querySelector('#passwordreg') // regitration password referece
