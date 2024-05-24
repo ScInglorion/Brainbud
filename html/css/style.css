@@ -61,6 +61,9 @@ h6 {
   color: var(--color-font-headers); }
 
 /* ----- Reset default style*/
+input {
+  border: none; }
+
 legend {
   padding: 0;
   display: table; }
@@ -127,6 +130,15 @@ button:active {
   width: 20rem;
   padding: 1rem; }
 
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .error__msg {
+    color: #ff4d4d;
+    font-size: 1.5rem;
+    margin-top: 2rem; }
+
 .window {
   background-color: #184E77;
   width: 40vw;
@@ -140,7 +152,7 @@ button:active {
   .window__logo {
     width: 20rem;
     height: 20rem;
-    background-image: url(../../media/img/logo.png);
+    background-image: url(../media/img/logo.png);
     background-size: cover;
     border-radius: 5rem;
     box-shadow: 0px 0px 8px 0px #42445a; }
