@@ -34,11 +34,12 @@ const login_email_pass = async() =>{
     try{
         const userCredentials = await signInWithEmailAndPassword(auth, login_email, login_password);
         console.log(userCredentials.user);
-        console.log("gj");
+        console.log(login_error, "gj");
+        window.location.href = "glowna.html"
     }
     catch(error){
         console.log("bład lol");
-        ui.showLoginError(error);
+        ui.showLoginError(login_error, error);
     }    
 
 }
@@ -50,16 +51,17 @@ const acc_creation = async() =>{
     if(registration_password == password_confiramtion){
         try{
             await createUserWithEmailAndPassword(auth, registration_email, registration_password);
-            ui.sukces('gg')
             console.log("gj")
+            window.location.href = "login.html"            
         }
         catch(error){
             console.log("error lol");
-            ui.showLoginError(error);
+            ui.showLoginError(login_error1, error);
         }    
     }
     else{
        console.log("rozne hasla lol");
+       ui.disclaimer(login_error1, "difference")
     }
 }
 
