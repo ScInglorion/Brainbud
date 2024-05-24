@@ -61,6 +61,10 @@ h6 {
   color: var(--color-font-headers); }
 
 /* ----- Reset default style*/
+a {
+  color: inherit;
+  text-decoration: none; }
+
 input {
   border: none; }
 
