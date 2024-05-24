@@ -100,3 +100,24 @@ button:active {
     outline: var(--color-white);
     border: 0.1rem solid var(--color-primary);
 }
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 800
+//.oxanium-<uniquifier> {
+//font-family: "Oxanium", sans-serif;
+// font-optical-sizing: auto;
+//font-weight: <weight>;
+// font-style: normal;
+//}
