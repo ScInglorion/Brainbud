@@ -1,11 +1,17 @@
 import {initializeApp} from 'firebase/app';
 
-import {getAuth, 
+import {
+    getAuth, 
     connectAuthEmulator,
     signInWithEmailAndPassword,
-    createUserWithEmailAndPassword} 
+    createUserWithEmailAndPassword,
+    onAuthStateChanged,
+    signOut
+} 
     from 'firebase/auth';
 import * as ui from './ui.js';
+
+var userCredentials = null;
 
 
 
@@ -25,7 +31,7 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 // firebase authorization instance
 const auth = getAuth(firebaseApp);
-//connectAuthEmulator(auth, "http://localhost:9099");
+connectAuthEmulator(auth, "http://localhost:9099");
 
 // callback for login button
 const login_email_pass = async() =>{
@@ -35,7 +41,8 @@ const login_email_pass = async() =>{
         const userCredentials = await signInWithEmailAndPassword(auth, login_email, login_password);
         console.log(userCredentials.user);
         console.log(login_error, "gj");
-        window.location.href = "glowna.html"
+        window.location.href = "glowna.html"  
+        // monitor_auth_state();
     }
     catch(error){
         console.log("bład lol");
@@ -52,7 +59,7 @@ const acc_creation = async() =>{
         try{
             await createUserWithEmailAndPassword(auth, registration_email, registration_password);
             console.log("gj")
-            window.location.href = "login.html"            
+            window.location.href = "login.html"             
         }
         catch(error){
             console.log("error lol");
@@ -65,6 +72,36 @@ const acc_creation = async() =>{
     }
 }
 
+const monitor_auth_state = async () =>{
+    onAuthStateChanged(auth, user => {
+        if (user) {
+          console.log(user)
+        if (window.location.pathname.endsWith('glowna.html') == false) {
+            window.location.href = "glowna.html";
+        } 
+      
+          // ...
+        } else {
+
+        }
+      });
+}
+
+  if (window.location.pathname.endsWith('login.html')){
+      
+  }
+  
+  
+  const logout = async () =>{
+    await signOut(auth).then(() =>{
+    window.location.href = 'login.html'
+    })
+    
+  
+    
+  }
+  
+
 // Waiting for a click on the login button
 if (ui.log_btn){
     ui.log_btn.addEventListener("click", login_email_pass);
@@ -75,5 +112,9 @@ if (ui.sign_btn){
     ui.sign_btn.addEventListener("click", acc_creation);
 }
 
+if (ui.logout_btn){
+    ui.logout_btn.addEventListener("click", logout);    
+}
 
 
+monitor_auth_state();
