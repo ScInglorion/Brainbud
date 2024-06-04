@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" type="image/png" href="./media/img/logo.png">
+</head>
+<body>
+    <div id="chat-app">
+        <div id="chat-container" >
+            <div id="chat_window"></div>
+            <input type="text" id="message_text" placeholder="Type your message here...">
+            <button id="message_btn">Send</button>
+            <button id="bak" onclick="go_to_page('glowna')">go bak</button>
+        </div>
+    </div>
+
+
+    <script type="module" src="./src/ui.js " defer></script>
+    <script type="module" src="./dist/bundle.js " defer></script>
+    <script>
+        function go_to_page(page_name) {
+            if (typeof page_name == 'string') {
+                window.location.href = page_name + ".html"
+            }
+        }
+    </script>
+</body>
+</html>

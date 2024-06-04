@@ -25,21 +25,28 @@
                 <div class="error">
                     <div class="error__msg"></div>
                 </div>
+                <form class="form">
+                    <label for="chatter_name" class="label">Użytkownik do chatu:</label>
+                    <input type="text" id="chatter_name" name="chatter_name" class="input" placeholder="Nazwa">
+                </form>   
+                 <button id='choose_chat_btn' href="login.html" class="button">
+                    <p>chat</p>
+                </button>
                 <button id='btn_logout' href="login.html" class="button">
                     <p>wyloguj się</p>
                  </button>
-
-
-
-                <!-- Div do sprawdzania czy działa error message -->
-                <div id="divLoginError" class="group">
-                    <div id="login_error" class="errorlabel"></div>
-                </div>
-            </section>
+            </section>      
 
     </main>
 
     <script type="module" src="./src/ui.js " defer></script>
     <script src="./dist/bundle.js " defer></script>
+    <script>
+        function go_to_page(page_name) {
+            if (typeof page_name == 'string') {
+                window.location.href = page_name + ".html"
+            }
+        }
+    </script>
 
 </body>
