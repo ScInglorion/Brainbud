@@ -54,4 +54,36 @@
             color: #fff;
         }
     }
+    &__dashboard {
+        position: relative;
+        &--nav {
+            width: 80vw;
+            height: 7rem;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        &--findbar {
+            width: 20vw;
+            height: auto;
+            padding: 1rem;
+            font-size: 2rem;
+            background-color: rgba(0, 0, 0, 0);
+            color: #fff;
+            border: none;
+            &::placeholder {
+                color: #fff;
+            }
+            &:focus {
+                border: none;
+            }
+        }
+        &--findIcon {
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    }
 }

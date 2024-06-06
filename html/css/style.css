@@ -220,6 +220,32 @@ button:active {
         color: #fff; }
     .main__chatbar--findIcon {
       color: #fff; }
+  .main__dashboard {
+    position: relative; }
+    .main__dashboard--nav {
+      width: 80vw;
+      height: 7rem;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+    .main__dashboard--findbar {
+      width: 20vw;
+      height: auto;
+      padding: 1rem;
+      font-size: 2rem;
+      background-color: rgba(0, 0, 0, 0);
+      color: #fff;
+      border: none; }
+      .main__dashboard--findbar::placeholder {
+        color: #fff; }
+      .main__dashboard--findbar:focus {
+        border: none; }
+    .main__dashboard--findIcon {
+      font-size: 2rem;
+      cursor: pointer; }
 
 .profile__photo {
   width: 5rem;
