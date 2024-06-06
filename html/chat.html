@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fontello-c1a405a1/css/fontello.css">
     <link rel="shortcut icon" type="image/png" href="./media/img/logo.png">
+
+    <title>BrainBud</title>
 </head>
+
 <body>
-    <div id="chat-app">
-        <div id="chat-container" >
-            <div id="chat_window"></div>
-            <input type="text" id="message_text" placeholder="Type your message here...">
-            <button id="message_btn">Send</button>
-            <button id="bak" onclick="go_to_page('main')">go bak</button>
+    <section class="start">
+        <div id="chat-app">
+            <section class="window window__chat" id="chat-container">
+                <div class="window__return" id="bak" onclick="go_to_page('glowna')">
+                    <a href="index.html">
+                        <img src="media/img/return_arrow.svg" alt="Return arrow" class="window__return--img">
+                    </a>
+                </div>
+                <div id="chat_window"></div>
+                <input type="text" id="message_text" class="input input__chat" placeholder="Type your message here...">
+                <button id="message_btn" class="button">Send</button>
+            </section>
         </div>
-    </div>
+    </section>
+
 
 
     <script type="module" src="./src/ui.js " defer></script>
@@ -28,4 +44,5 @@
         }
     </script>
 </body>
+
 </html>

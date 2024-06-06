@@ -1,3 +1,8 @@
 
 .icon-search:before { content: '\e800'; } /* '' */
 .icon-cog:before { content: '\e801'; } /* '' */
+.icon-power:before { content: '\e802'; } /* '' */
+.icon-book-open:before { content: '\e803'; } /* '' */
+.icon-help:before { content: '\e804'; } /* '' */
+.icon-calendar:before { content: '\e805'; } /* '' */
+.icon-doc:before { content: '\e806'; } /* '' */
