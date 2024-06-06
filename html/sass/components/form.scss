@@ -12,6 +12,10 @@
         background-color: #ff8080;
         transform: translateY(-2px);
     }
+    &>a {
+        text-decoration: none;
+        color: #fff;
+    }
 }
 
 .form {

@@ -1,0 +1,12 @@
+.profile {
+    &__photo {
+        width: 5rem;
+        height: auto;
+        border-radius: 50%;
+    }
+    &__name {
+        color: #fff;
+        font-size: 2rem;
+        padding: 1rem;
+    }
+}
