@@ -41,6 +41,12 @@
       "css": "calendar",
       "code": 59397,
       "src": "linecons"
+    },
+    {
+      "uid": "1b5a5d7b7e3c71437f5a26befdd045ed",
+      "css": "doc",
+      "code": 59398,
+      "src": "fontawesome"
     }
   ]
 }
