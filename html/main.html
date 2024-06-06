@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./fontello-c1a405a1/css/fontello.css">
+    <link rel="shortcut icon" type="image/png" href="./media/img/logo.png">
+
+    <title>BrainBud</title>
+</head>
+
+<body>
+    <main class="main">
+        <section class="main">
+            <section class="main__chatbar">
+                <div class="main__chatbar--logo">
+                </div>
+                <div class="main__chatbar--find">
+                    <input type="text" id="chatFind" name="chatFind" placeholder="Wyszukaj użytkownika" class="main__chatbar--findbar">
+                    <button id='btn_chatFind' href="login.html">
+                        <i class="icon-search main__chatbar--findIcon"></i> 
+                     </button>
+                </div>
+                <div class="main__chatbar--chat">
+                    <img src="media/img/Profile1.jpeg" alt="profile photo" class="profile__photo">
+                    <p class="profile__name">Chat 1</p>
+                </div>
+            </section>
+            <section class="main__dashboard">
+                <div class="main__dashboard--nav">
+                    <i class="icon-search main__dashboard--findIcon"></i>
+                    <input type="text" id="dashboardFind" name="dashboardFind" placeholder="Szukaj" class="main__dashboard--findbar">
+
+                    <a id='btn_logout'><i class="icon-power main__dashboard--linkIcon"></i></a>
+                    <a href="#"><i class="icon-cog main__dashboard--linkIcon"></i></a>
+                    <div class="main__chatbar--chat">
+                        <img src="media/img/Profile0.jpeg" alt="profile photo" class="profile__photo">
+                        <p class="profile__name">Użytkownik</p>
+                    </div>
+                </div>
+                <div class="main__dashboard--grid">
+                    <div class="main__dashboard--gridItem">
+                        <i class="icon-book-open main__dashboard--gridIcon"></i>
+                        <p>Moje sesje nauki</p>
+                    </div>
+                    <div class="main__dashboard--gridItem">
+                        <i class="icon-help main__dashboard--gridIcon"></i>
+                        <p>Quizy</p>
+                    </div>
+                    <div class="main__dashboard--gridItem">
+                        <i class="icon-calendar main__dashboard--gridIcon"></i>
+                        <p>Kalendarz</p>
+                    </div>
+                    <div class="main__dashboard--gridItem">
+                        <i class="icon-doc main__dashboard--gridIcon"></i>
+                        <p>Pliki</p>
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+    </main>
+    <script type="module" src="./src/ui.js " defer></script>
+    <script src="./dist/bundle.js " defer></script>
+</body>

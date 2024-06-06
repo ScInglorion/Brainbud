@@ -70,6 +70,12 @@ h6 {
 
 /* ----- Reset default style*/
 
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 legend {
     padding: 0;
     display: table;
