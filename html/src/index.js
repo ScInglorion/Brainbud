@@ -172,7 +172,7 @@ if (ui.send_message_btn){
         if (message && user) {
             addDoc(collection(db, user+'_messages'), {
                 text: message,
-                name: user,
+                name: auth.currentUser.displayName,
                 timestamp: new Date()
             }).then(() => {
                 ui.message_text.value = '';
