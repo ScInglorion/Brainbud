@@ -46,7 +46,7 @@ const login_email_pass = async() =>{
         visitor = userCredentials;
         console.log(userCredentials.user);
         console.log(login_error, "gj");
-        window.location.href = "glowna.html"  
+        window.location.href = "main.html"  
     }
     catch(error){
         console.log("bład lol");
@@ -90,8 +90,8 @@ const monitor_auth_state = async () =>{
     onAuthStateChanged(auth, user => {
         if (user) {
             console.log(user)
-            if (window.location.pathname.endsWith('glowna.html') == false && window.location.pathname.endsWith('chat.html') == false) {
-                window.location.href = "glowna.html";  
+            if (window.location.pathname.endsWith('main.html') == false && window.location.pathname.endsWith('chat.html') == false) {
+                window.location.href = "main.html";  
             } 
             if(window.location.pathname.endsWith('chat.html') == true){
                 const chosen_chatter = localStorage.getItem('value1');
@@ -99,7 +99,7 @@ const monitor_auth_state = async () =>{
             }
         } 
         else if (!user) {
-            if (window.location.pathname.endsWith('glowna.html') || window.location.pathname.endsWith('chat.html')) {
+            if (window.location.pathname.endsWith('main.html') || window.location.pathname.endsWith('chat.html')) {
                 window.location.href = "login.html";
             } 
         }
@@ -108,7 +108,7 @@ const monitor_auth_state = async () =>{
  
 // function to get a name of a person to chat with
 function chatting() {
-    const logged_user = auth.currentUser.displayName.substring(0,auth.currentUser.displayName.indexOf("@"))
+    const logged_user = auth.currentUser.email.substring(0,auth.currentUser.email.indexOf("@"))
     const goto_user = ui.chatter_name.value.substring(0,ui.chatter_name.value.indexOf("@"))
     const outcome = logged_user.localeCompare(goto_user);
     let chosen_chatter;
@@ -172,7 +172,7 @@ if (ui.send_message_btn){
         if (message && user) {
             addDoc(collection(db, user+'_messages'), {
                 text: message,
-                name: auth.currentUser.displayName,
+                name: auth.currentUser.email,
                 timestamp: new Date()
             }).then(() => {
                 ui.message_text.value = '';
