@@ -1,0 +1,15 @@
+@import "./../base/base.scss";
+.message {
+    width: 90%;
+    max-height: 50vh;
+    overflow-y: auto;
+    &>div {
+        margin-bottom: 1rem;
+        color: var(--color-font-dark);
+        padding: 1rem;
+        width: 100%;
+        font-size: 1.2rem;
+        background-color: var(--color-bg-light);
+        border-radius: 1rem;
+    }
+}
