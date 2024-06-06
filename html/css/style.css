@@ -124,6 +124,8 @@ button:active {
   height: 4rem;
   width: 20rem;
   padding: 1rem; }
+  .input__chat {
+    width: 90%; }
 
 .error {
   display: flex;
@@ -145,6 +147,9 @@ button:active {
   align-items: center;
   flex-direction: column;
   position: relative; }
+  .window__chat {
+    height: 80vh;
+    justify-content: flex-end; }
   .window__return {
     position: absolute;
     top: 3rem;

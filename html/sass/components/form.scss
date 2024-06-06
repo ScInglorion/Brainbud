@@ -35,6 +35,9 @@
     height: 4rem;
     width: 20rem;
     padding: 1rem;
+    &__chat {
+        width: 90%;
+    }
 }
 
 .error {
