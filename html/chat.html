@@ -21,11 +21,9 @@
         <div id="chat-app">
             <section class="window window__chat" id="chat-container">
                 <div class="window__return" id="bak" onclick="go_to_page('main')">
-                    <a href="index.html">
-                        <img src="media/img/return_arrow.svg" alt="Return arrow" class="window__return--img">
-                    </a>
+                        <img src="media/img/return_arrow.svg" alt="Return arrow" class="window__return--img" onclick="go_to_page('main')">
                 </div>
-                <div id="chat_window"></div>
+                <div id="chat_window" class="message"></div>
                 <input type="text" id="message_text" class="input input__chat" placeholder="Type your message here...">
                 <button id="message_btn" class="button">Send</button>
             </section>
