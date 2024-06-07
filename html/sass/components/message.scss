@@ -3,13 +3,18 @@
     width: 90%;
     max-height: 50vh;
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
     &>div {
         margin-bottom: 1rem;
         color: var(--color-font-dark);
         padding: 1rem;
         width: 100%;
         font-size: 1.2rem;
-        background-color: var(--color-bg-light);
+        background-color: #cee;
         border-radius: 1rem;
     }
 }
